@@ -15,7 +15,7 @@ async function collectData() {
     if (!apiCall.ok) {
       throw new Error("Failed to fetch data from the API");
     }
-
+    console.log("isOkey", apiCall.ok);
     const data = await apiCall.json();
     return data.articles;
   } catch (error) {
