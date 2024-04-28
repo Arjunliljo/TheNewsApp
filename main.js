@@ -11,7 +11,7 @@ async function collectData() {
     const apiCall = await fetch(
       `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
     );
-
+    console.log(apiCall);
     if (!apiCall.ok) {
       throw new Error("Failed to fetch data from the API");
     }
