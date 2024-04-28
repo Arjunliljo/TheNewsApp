@@ -5,11 +5,11 @@ const subContentH2 = document.querySelectorAll(".sub-contents H2");
 const subContentSpan = document.querySelectorAll(".sub-contents span");
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-
+console.log(API_KEY);
 async function collectData() {
   try {
     const apiCall = await fetch(
-      `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=${API_KEY}`
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
     );
 
     if (!apiCall.ok) {
