@@ -1,0 +1,23 @@
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#section1 .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* corrected from 1f to 1fr */
+  grid-template-rows: repeat(3, 150px);
+  gap: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  #section1 .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 150px);
+  }
+}
+
+#section1 .container {
+  margin-top: 3rem;
+}

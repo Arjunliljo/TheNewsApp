@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Page Title</title>
+
+    <!-- Noto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="Css/base.css" />
+    <link rel="stylesheet" href="Css/layout.css" />
+    <link rel="stylesheet" href="Css/colors.css" />
+    <link rel="stylesheet" href="Css/components.css" />
+    <link rel="stylesheet" href="Css/index.css" />
+    <link rel="stylesheet" href="Css/mediaQuories.css" />
+  </head>
+  <body>
+    <header>
+      <!-- top white part of the header -->
+      <div class="header-top">
+        <!-- logo and search icons -->
+        <div class="header-top__icon-box">
+          <!-- menu icon -->
+          <div class="menu-icon">
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
+
+          <!-- logo -->
+          <img
+            src="https://images.assettype.com/thecue/2019-05/dac0fb2f-a261-4a22-946f-ca1c22a6cfad/logo_2_x_3x.png"
+            alt="logo"
+          />
+        </div>
+        <!-- search icon -->
+        <span class="search-icon">
+          <span class="material-symbols-outlined"> search </span>
+        </span>
+      </div>
+
+      <!-- bottom part of the header -->
+      <nav class="navigations">
+        <!-- menu icon bottom-->
+        <div class="menu-icon-bottom">
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+
+        <ul class="nav-ul">
+          <li class="nav-ul__items">Videos</li>
+          <li class="nav-ul__items">Opinion</li>
+          <li class="nav-ul__items">Newsroom</li>
+          <li class="nav-ul__items">Cue Studio</li>
+          <li class="nav-ul__items">Movie Review</li>
+          <li class="nav-ul__items">Editor's Pick</li>
+          <li class="nav-ul__items">Brand Stories</li>
+          <li class="nav-ul__items">About Us</li>
+        </ul>
+
+        <div class="nav-ul__moon-icon">
+          <span class="material-symbols-outlined"> clear_night </span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- first section of the page contains main contents of the Page -->
+      <section id="section1">
+        <!-- container for big screen -->
+        <div class="container">
+          <!-- first heading -->
+          <h1 class="happening">Happening</h1>
+          <!-- the grid system for the content to align correctly responsible for responsiveness -->
+          <div class="grid">
+            <!-- the big and main content span 3 row of the grid -->
+            <div class="grid__mainContent">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                alt=""
+              />
+            </div>
+
+            <!-- sub contents that next to the big thumbnail it is a flex -->
+            <div class="sub-contents">
+              <!-- first part of the box -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                alt=""
+              />
+
+              <!-- second part of the box -->
+              <div>
+                <button class="btn">Click me</button>
+                <h2>content headings and stuff</h2>
+                <span>മിഥുൻ പ്രകാശ് 19 Apr 2024 1 min read</span>
+              </div>
+            </div>
+            <!-- sub contents that next to the big thumbnail it is a flex -->
+            <div class="sub-contents">
+              <!-- first part of the box -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                alt=""
+              />
+
+              <!-- second part of the box -->
+              <div>
+                <button class="btn">Click me</button>
+                <h2>content headings and stuff</h2>
+                <span>മിഥുൻ പ്രകാശ് 19 Apr 2024 1 min read</span>
+              </div>
+            </div>
+            <!-- sub contents that next to the big thumbnail it is a flex -->
+            <div class="sub-contents">
+              <!-- first part of the box -->
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png"
+                alt=""
+              />
+
+              <!-- second part of the box -->
+              <div>
+                <button class="btn">Click me</button>
+                <h2>content headings and stuff</h2>
+                <span>മിഥുൻ പ്രകാശ് 19 Apr 2024 1 min read</span>
+              </div>
+            </div>
+            <!-- grid closes -->
+          </div>
+
+          <!-- container closes -->
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <!-- Your JavaScript can go here -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

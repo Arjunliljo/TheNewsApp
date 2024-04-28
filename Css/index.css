@@ -1,0 +1,90 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* header  */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  max-width: 1200px;
+}
+
+.header-top__icon-box img {
+  height: 32px;
+}
+.header-top__icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 1.6rem;
+}
+.menu-icon-bottom {
+  display: none;
+}
+/* navigations on header */
+.navigations {
+  background-color: var(--primery-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+}
+.navigations span {
+  color: white;
+}
+.nav-ul {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  list-style: none;
+  gap: 2rem;
+  width: 90%;
+  overflow: hidden;
+}
+
+.nav-ul li {
+  color: #fff;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+/* section1 grid system and main newses of the page */
+.happening {
+  font-size: 4rem;
+  border-left: 10px solid var(--primery-color);
+  padding-left: 1rem;
+  margin-bottom: 4rem;
+}
+.grid > :first-child {
+  -ms-grid-row-span: 3;
+  grid-row: span 3;
+}
+.grid img {
+  object-fit: cover;
+  height: 100%;
+  object-position: left;
+}
+.grid > :first-child img {
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+  height: 60% !important;
+}
+.sub-contents {
+  display: flex;
+  gap: 1rem;
+}
+.sub-contents div {
+  padding: 1.5rem;
+}
+.sub-contents div h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
