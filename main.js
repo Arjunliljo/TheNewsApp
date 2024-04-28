@@ -6,12 +6,10 @@ const subContentSpan = document.querySelectorAll(".sub-contents span");
 const API_KEY = import.meta.env.VITE_API_KEY;
 console.log(API_KEY);
 
-// Function to fetch data using CORS Anywhere proxy
 async function collectData() {
   try {
-    // Use CORS Anywhere proxy to bypass CORS restrictions
     const apiCall = await fetch(
-      `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
     );
 
     if (!apiCall.ok) {
