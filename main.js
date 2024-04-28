@@ -1,4 +1,3 @@
-// first section
 const mainContent = document.querySelector(".grid__mainContent img");
 const subContentImg = document.querySelectorAll(".sub-contents img");
 const subContentH2 = document.querySelectorAll(".sub-contents H2");
@@ -6,10 +5,13 @@ const subContentSpan = document.querySelectorAll(".sub-contents span");
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 console.log(API_KEY);
+
+// Function to fetch data using CORS Anywhere proxy
 async function collectData() {
   try {
+    // Use CORS Anywhere proxy to bypass CORS restrictions
     const apiCall = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
+      `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
     );
 
     if (!apiCall.ok) {
@@ -19,7 +21,7 @@ async function collectData() {
     const data = await apiCall.json();
     return data.articles;
   } catch (error) {
-    alert("Error fetching data:", error.message);
+    alert("Error fetching data: " + error.message);
     return [];
   }
 }
