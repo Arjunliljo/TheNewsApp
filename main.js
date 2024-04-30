@@ -7,21 +7,13 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 console.log(API_KEY);
 
 async function collectData() {
-  try {
-    const apiCall = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${API_KEY}`
-    );
-    console.log(apiCall);
-    if (!apiCall.ok) {
-      throw new Error("Failed to fetch data from the API");
-    }
-    console.log("isOkey", apiCall.ok);
-    const data = await apiCall.json();
-    return data.articles;
-  } catch (error) {
-    alert("Error fetching data: " + error.message);
-    return [];
-  }
+  const apiCall = await fetch(
+    `https://newsdata.io/api/1/news?apikey=pub_432053a9495df311d59ad804f974228339696&q=pegasus&language=en`
+  );
+
+  const data = await apiCall.json();
+
+  return data.results;
 }
 
 (async () => {
@@ -30,11 +22,11 @@ async function collectData() {
     console.log(data);
 
     if (data.length > 0) {
-      mainContent.src = data[0].urlToImage;
+      mainContent.src = data[0].image_url;
 
       subContentImg.forEach((el, i) => {
         if (data[i + 1]) {
-          el.src = data[i + 1].urlToImage;
+          el.src = data[i + 1].image_url;
           subContentH2[i].innerHTML = data[i + 1].title;
           subContentSpan[i].innerHTML = data[i + 1].author;
         } else {
