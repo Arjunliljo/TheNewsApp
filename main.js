@@ -4,7 +4,6 @@ const subContentH2 = document.querySelectorAll(".sub-contents H2");
 const subContentSpan = document.querySelectorAll(".sub-contents span");
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-console.log(API_KEY);
 
 async function collectData() {
   const apiCall = await fetch(
@@ -26,9 +25,14 @@ async function collectData() {
 
       subContentImg.forEach((el, i) => {
         if (data[i + 1]) {
-          el.src = data[i + 1].image_url;
+          if (data[i + 1].image_url) {
+            el.src = data[i + 1].image_url;
+          } else {
+            i++;
+            el.src = data[i + 1].image_url;
+          }
           subContentH2[i].innerHTML = data[i + 1].title;
-          subContentSpan[i].innerHTML = data[i + 1].author;
+          subContentSpan[i].innerHTML = data[i + 1].creator[0];
         } else {
           alert("Not enough articles to populate all elements.");
         }
