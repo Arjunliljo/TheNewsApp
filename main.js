@@ -20,8 +20,8 @@ async function collectData() {
 }
 
 (async () => {
-  const titleCorrecter = (title) => {
-    if (title.length >= 30) return title.slice(0, 40).concat(".".repeat(3));
+  const titleCorrecter = (title, num) => {
+    if (title.length >= num) return title.slice(0, num).concat(".".repeat(3));
     else title;
   };
 
@@ -31,7 +31,8 @@ async function collectData() {
 
     if (data.length > 0) {
       mainContent.src = data[0].image_url;
-      mainH2.innerHTML = titleCorrecter(data[0].title);
+      mainH2.innerHTML = titleCorrecter(data[0].title, 40);
+      mainParagraph.innerHTML = titleCorrecter(data[0]?.description, 180);
 
       subContentImg.forEach((el, i) => {
         if (data[i + 1]) {
@@ -43,9 +44,9 @@ async function collectData() {
           subContentH2[i].innerHTML = data[i + 1].title;
           subContentSpan[i].innerHTML = data[i + 1].creator[0];
           subContentBtn[i].innerHTML = data[i + 1].pubDate.split(" ")[0];
-          mainParagraph[i].innerHTML = data[i + 1].description;
         } else {
           alert("Not enough articles to populate all elements.");
+          console.log(data[i]);
         }
       });
     } else {
