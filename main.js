@@ -14,7 +14,15 @@ async function collectData() {
     `https://newsdata.io/api/1/news?apikey=${API_KEY}&q=pegasus&language=en`
   );
 
+  if (!apiCall.ok) {
+    throw new Error("Failed to fetch data from the API");
+  }
+
   const data = await apiCall.json();
+
+  if (!data.results) {
+    throw new Error("No results found in the API response");
+  }
 
   return data.results;
 }
@@ -28,11 +36,11 @@ async function collectData() {
   try {
     const data = await collectData();
     console.log(data);
-
     if (data.length > 0) {
       mainContent.src = data[0].image_url;
       mainH2.innerHTML = titleCorrecter(data[0].title, 40);
-      mainParagraph.innerHTML = titleCorrecter(data[0]?.description, 180);
+      console.log(data[0].description);
+      mainParagraph.innerHTML = data[0].description;
 
       subContentImg.forEach((el, i) => {
         if (data[i + 1]) {
@@ -42,15 +50,17 @@ async function collectData() {
           else el.src = data[i + 1].image_url;
 
           subContentH2[i].innerHTML = data[i + 1].title;
-          subContentSpan[i].innerHTML = data[i + 1].creator[0];
+          subContentSpan[i].innerHTML = data[i + 1].creator[0]
+            ? data[i + 1].creator[0]
+            : "BBC News";
           subContentBtn[i].innerHTML = data[i + 1].pubDate.split(" ")[0];
         } else {
           alert("Not enough articles to populate all elements.");
-          console.log(data[i]);
         }
       });
     } else {
       alert("No articles found in the API response.");
+      throw new Error("No Results Found");
     }
   } catch (error) {
     alert("Error: " + error.message);

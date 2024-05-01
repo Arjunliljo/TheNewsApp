@@ -65,22 +65,26 @@
 .grid > :first-child {
   -ms-grid-row-span: 3;
   grid-row: span 3;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
 @media only screen and (max-width: 1000px) {
   .grid > :first-child {
     margin-bottom: 15rem;
   }
 }
-.grid img {
-  object-fit: cover;
-  height: 100%;
-  object-position: left;
+.grid .mainImg-box {
+  overflow: hidden;
+  height: 60%;
+  background-color: yellow;
 }
+
 .grid > :first-child img {
   object-fit: cover;
-  object-position: left;
+  object-position: center;
   width: 100%;
-  height: 60% !important;
+  height: 100%;
 }
 .grid__mainContent {
   display: block;
@@ -99,13 +103,14 @@
   gap: 1rem;
 }
 .image-box {
-  background-color: yellow;
+  /* background-color: yellow; */
   overflow: hidden;
 }
 .image-box img {
-  width: 100%;
   height: 100%;
-  object-position: center;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .sub-contents button,

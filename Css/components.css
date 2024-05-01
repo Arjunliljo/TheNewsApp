@@ -6,3 +6,17 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.section-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 2px solid gray;
+  width: 12rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  color: gray;
+}
