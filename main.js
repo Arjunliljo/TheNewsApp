@@ -43,6 +43,7 @@ async function collectData() {
           subContentH2[i].innerHTML = data[i + 1].title;
           subContentSpan[i].innerHTML = data[i + 1].creator[0];
           subContentBtn[i].innerHTML = data[i + 1].pubDate.split(" ")[0];
+          mainParagraph[i].innerHTML = data[i + 1].description;
         } else {
           alert("Not enough articles to populate all elements.");
         }
