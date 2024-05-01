@@ -11,7 +11,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 async function collectData() {
   const apiCall = await fetch(
-    `https://newsdata.io/api/1/news?apikey=pub_432053a9495df311d59ad804f974228339696&q=pegasus&language=en`
+    `https://newsdata.io/api/1/news?apikey=${API_KEY}&q=pegasus&language=en`
   );
 
   const data = await apiCall.json();
