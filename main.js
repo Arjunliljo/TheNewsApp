@@ -1,3 +1,5 @@
+import getData from "./test";
+
 const mainContent = document.querySelector(".grid__mainContent img");
 const mainH2 = document.querySelector(".grid__mainContent h2");
 const mainParagraph = document.querySelector(".grid__mainContent p");
@@ -15,12 +17,14 @@ async function collectData() {
   );
 
   if (!apiCall.ok) {
+    console.log("collect data error");
     throw new Error("Failed to fetch data from the API");
   }
 
   const data = await apiCall.json();
 
   if (!data.results) {
+    console.log("collect data error");
     throw new Error("No results found in the API response");
   }
 
@@ -37,20 +41,21 @@ async function collectData() {
     const data = await collectData();
     console.log(data);
     if (data.length > 0) {
-      mainContent.src = data[0].image_url;
-      mainH2.innerHTML = titleCorrecter(data[0].title, 40);
-      console.log(data[0].description);
+      mainContent.src = data[0]?.image_url;
+      mainH2.innerHTML = titleCorrecter(data[0]?.title, 40);
+
       mainParagraph.innerHTML = data[0].description;
 
       subContentImg.forEach((el, i) => {
+        console.log(data[i + 1]);
         if (data[i + 1]) {
-          if (!data[i + 1].image_url)
+          if (!data[i + 1]?.image_url)
             el.src =
               "https://cpworldgroup.com/wp-content/uploads/2021/01/placeholder.png";
-          else el.src = data[i + 1].image_url;
+          else el.src = data[i + 1]?.image_url;
 
-          subContentH2[i].innerHTML = data[i + 1].title;
-          subContentSpan[i].innerHTML = data[i + 1].creator[0]
+          subContentH2[i].innerHTML = data[i + 1]?.title;
+          subContentSpan[i].innerHTML = data[i + 1]?.creator[0]
             ? data[i + 1].creator[0]
             : "BBC News";
           subContentBtn[i].innerHTML = data[i + 1].pubDate.split(" ")[0];
@@ -63,6 +68,7 @@ async function collectData() {
       throw new Error("No Results Found");
     }
   } catch (error) {
+    console.log("first error");
     alert("Error: " + error.message);
   }
 })();
