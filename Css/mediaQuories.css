@@ -11,4 +11,15 @@
   .menu-icon-bottom {
     display: inline-block;
   }
+  #section2 .treanding-grid {
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+  }
+  .treanding-grid-contents {
+    flex-direction: column;
+    height: 30rem;
+  }
+  .treanding-grid-contents .image-box {
+    width: 100%;
+  }
 }

@@ -24,3 +24,11 @@ header {
 #section1 .container {
   margin-top: 3rem;
 }
+#section2 {
+  margin: 10rem 0;
+}
+#section2 .treanding-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}

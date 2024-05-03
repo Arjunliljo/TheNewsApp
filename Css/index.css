@@ -69,11 +69,7 @@
   flex-direction: column;
   /* justify-content: space-between; */
 }
-@media only screen and (max-width: 1000px) {
-  .grid > :first-child {
-    margin-bottom: 15rem;
-  }
-}
+
 .grid .mainImg-box {
   overflow: hidden;
   height: 60%;
@@ -116,4 +112,25 @@
 .sub-contents button,
 h2 {
   margin-bottom: 1rem;
+}
+
+.treanding-grid-contents {
+  height: 20rem;
+  border: 5px solid white;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: orangered;
+  overflow: hidden;
+}
+.treanding-grid-contents .image-box {
+  width: 22rem;
+}
+.treanding-grid-contents span {
+  font-size: 1.4rem;
+}
+.treanding-grid-contents h2 {
+  font-size: 1.6rem;
+  margin: 0;
 }
