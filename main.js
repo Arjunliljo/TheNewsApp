@@ -26,7 +26,7 @@ async function collectData() {
     throw new Error("No results found in the API response");
   }
 
-  renderContents(data.results.slice(3));
+  renderContents(data.results);
 
   return data.results;
 }
@@ -79,8 +79,10 @@ const treandingSpan = document.querySelectorAll(
 );
 
 async function renderContents(data) {
-  console.log(data);
+  let cur = 0;
   treandingItems.forEach((element, i) => {
-    treandingImg.src = data;
+    if (i === 9) cur = 0;
+    if (data[cur].image_url) treandingImg[cur].src = data?.at(cur).image_url;
+    cur++;
   });
 }

@@ -26,9 +26,10 @@ header {
 }
 #section2 {
   margin: 10rem 0;
+  background-color: rgb(196, 206, 57);
+  padding: 6rem 0;
 }
-#section2 .treanding-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+#section2 .container {
+  background-color: transparent;
+  box-shadow: none;
 }

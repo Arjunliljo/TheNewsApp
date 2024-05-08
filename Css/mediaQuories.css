@@ -22,4 +22,7 @@
   .treanding-grid-contents .image-box {
     width: 100%;
   }
+  #section2 .contents {
+    flex-direction: row;
+  }
 }

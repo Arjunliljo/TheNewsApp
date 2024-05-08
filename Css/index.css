@@ -114,23 +114,20 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.treanding-grid-contents {
-  height: 20rem;
-  border: 5px solid white;
+#section2 .container .sub-contents {
+  flex: 1;
+  background-color: transparent;
+}
+#section2 .contents {
+  background-color: transparent;
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  border-radius: 1rem;
-  background-color: orangered;
-  overflow: hidden;
+  flex-direction: column;
+  gap: 3rem;
 }
-.treanding-grid-contents .image-box {
-  width: 22rem;
+.contents .sub-contents {
+  display: flex;
+  flex-direction: column;
 }
-.treanding-grid-contents span {
-  font-size: 1.4rem;
-}
-.treanding-grid-contents h2 {
-  font-size: 1.6rem;
-  margin: 0;
+.contents .sub-contents .image-box {
+  height: 25rem;
 }
