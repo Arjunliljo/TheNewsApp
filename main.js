@@ -73,10 +73,6 @@ async function collectData() {
 
 const treandingItems = document.querySelectorAll(".treanding-grid-contents");
 const treandingImg = document.querySelectorAll(".treanding-grid-contents img");
-const treandingH2 = document.querySelectorAll(".treanding-grid-contents h2");
-const treandingSpan = document.querySelectorAll(
-  ".treanding-grid-contents span"
-);
 
 async function renderContents(data) {
   let cur = 0;

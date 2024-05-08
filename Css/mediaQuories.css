@@ -25,4 +25,22 @@
   #section2 .contents {
     flex-direction: row;
   }
+  footer {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  footer ul li:last-child {
+    text-wrap: nowrap;
+    flex-basis: 0%;
+    align-self: center;
+  }
+
+  footer .footer-logo {
+    display: block;
+  }
+  footer .footer-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }

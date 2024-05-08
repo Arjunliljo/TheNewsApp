@@ -131,3 +131,26 @@ h2 {
 .contents .sub-contents .image-box {
   height: 25rem;
 }
+footer ul {
+  list-style: none;
+  display: flex;
+
+  padding: 0 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+footer ul li:last-child {
+  flex-basis: 100%;
+}
+footer .copyright {
+  text-align: center;
+  padding: 2rem 5rem;
+}
+footer .footer-logo {
+  margin: 0 5rem;
+  width: 10rem;
+  display: none;
+}
